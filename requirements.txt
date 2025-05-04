@@ -75,6 +75,7 @@ networkx==3.2.1
 nltk==3.9.1
 numba==0.60.0
 numpy==1.24.3
+olefile==0.46
 omegaconf==2.3.0
 onnxruntime==1.19.2
 orjson==3.10.18

@@ -130,10 +130,10 @@ class ToolButton(gr.Button, gr.components.FormComponent):
         return "button"
 
 
-weight_root = os.getenv("weight_root")
-weight_uvr5_root = os.getenv("weight_uvr5_root")
-index_root = os.getenv("index_root")
-outside_index_root = os.getenv("outside_index_root")
+weight_root = os.getenv("weight_root") or os.path.join(now_dir, "assets/weights")
+weight_uvr5_root = os.getenv("weight_uvr5_root") or os.path.join(now_dir, "assets/uvr5_weights")
+index_root = os.getenv("index_root") or os.path.join(now_dir, "assets/weights")
+outside_index_root = os.getenv("outside_index_root") or os.path.join(now_dir, "assets/weights")
 
 names = []
 for name in os.listdir(weight_root):
