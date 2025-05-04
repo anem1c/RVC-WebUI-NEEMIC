@@ -32,11 +32,15 @@ coverage/
 venv/
 env/
 .env/
+.venv/
 
 # Python cache files
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
+.coverage
+htmlcov/
 
 # Distribution / packaging
 dist/
@@ -56,4 +60,36 @@ Thumbs.db
 
 # Logs and databases
 *.log
-*.sqlite3 
+*.sqlite3
+
+# GitHub specific
+.github/
+.github/*
+!.github/README.md
+
+# Model files and weights
+assets/weights/*
+assets/uvr5_weights/*
+!assets/weights/.gitkeep
+!assets/uvr5_weights/.gitkeep
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Cache directories
+.cache/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Local development
+local_settings.py
+db.sqlite3 
