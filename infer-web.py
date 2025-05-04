@@ -131,9 +131,13 @@ class ToolButton(gr.Button, gr.components.FormComponent):
 
 
 weight_root = os.getenv("weight_root") or os.path.join(now_dir, "assets/weights")
-weight_uvr5_root = os.getenv("weight_uvr5_root") or os.path.join(now_dir, "assets/uvr5_weights")
+weight_uvr5_root = os.getenv("weight_uvr5_root") or os.path.join(
+    now_dir, "assets/uvr5_weights"
+)
 index_root = os.getenv("index_root") or os.path.join(now_dir, "assets/weights")
-outside_index_root = os.getenv("outside_index_root") or os.path.join(now_dir, "assets/weights")
+outside_index_root = os.getenv("outside_index_root") or os.path.join(
+    now_dir, "assets/weights"
+)
 
 names = []
 for name in os.listdir(weight_root):
@@ -1617,5 +1621,5 @@ with gr.Blocks(title="RVC WebUI") as app:
             server_port=config.listen_port,
             quiet=True,
             max_threads=511,
-            share=True
+            share=True,
         )
